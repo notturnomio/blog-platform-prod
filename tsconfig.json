@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    // Highlights all places where the type is not specified. However, this does not mean that any can no longer be used at all. This only means that in such situations, the developer must explicitly write any
+    "noImplicitAny": true,
+    "module": "es6",
+    // What spec do we compile to: to support most browsers
+    "target": "es5",
+    "jsx": "react",
+    // The compiler will process not only TS files, but also JS files
+    "allowJs": true,
+    "moduleResolution": "node",
+    // esModuleInterop allows you to work with packages that use common js as with regular package using import (require() module.export) = common js
+    "esModuleInterop": true,
+    // If any library doesn't have a default export, loaders like ts-loader or babel-loader automatically create them. Instead of import * as React from 'react' you can write import React from 'react';
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
