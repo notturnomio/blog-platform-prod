@@ -1,3 +1,3 @@
 import { someFn } from "./test";
 
-someFn(1234);
+someFn(123);
