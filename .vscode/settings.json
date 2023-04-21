@@ -49,5 +49,6 @@
     "yaml",
     "yml",
     "webpack"
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
