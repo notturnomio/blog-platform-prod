@@ -3,7 +3,7 @@
     "outDir": "./dist/",
     // Highlights all places where the type is not specified. However, this does not mean that any can no longer be used at all. This only means that in such situations, the developer must explicitly write any
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "ESNext",
     // What spec do we compile to: to support most browsers
     "target": "es5",
     "jsx": "react-jsx",
