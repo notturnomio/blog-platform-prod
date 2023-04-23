@@ -10,7 +10,10 @@
     // The compiler will process not only TS files, but also JS files
     "allowJs": true,
     // Absolute import
-    // "baseUrl": ".",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     "moduleResolution": "node",
     // esModuleInterop allows you to work with packages that use common js as with regular package using import (require() module.export) = common js
     "esModuleInterop": true,
