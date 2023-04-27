@@ -9,7 +9,9 @@ export function classNames(
     cls,
     ...additional.filter(Boolean),
     ...Object.keys(mods).filter((key) => mods[key]),
-  ].join(" ");
+  ]
+    .join(" ")
+    .replace("  ", " ");
 }
 
 classNames("remove-btn", { hovered: true, selectable: true, red: false }, [

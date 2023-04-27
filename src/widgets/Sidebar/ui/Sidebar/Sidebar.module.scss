@@ -1,0 +1,35 @@
+.sidebar {
+  height: calc(100vh - var(--navbar-height));
+  width: var(--sidebar-width);
+  background: var(--sidebar-bg-color);
+  transition: width 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+}
+
+.switchers {
+  // position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  // justify-self: end;
+  // width: auto;
+  gap: 10px;
+}
+
+.toggleButton {
+  margin-top: 20px;
+  margin-bottom: auto;
+  background: var(--button-bg-color);
+  color: var(--inverted-button-text-color);
+  width: 50%;
+  margin: 20px auto auto auto;
+}
+
+.toggleButtonCollapsed {
+}
