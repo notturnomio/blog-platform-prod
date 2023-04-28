@@ -36,11 +36,34 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     ],
   };
 
+  const babelLoader = {
+    test: /\.(js|jsx|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ["@babel/preset-env"],
+        plugins: [
+          [
+            "i18next-extract",
+            {
+              locales: ["en", "es"],
+              keyAsDefaultValue: false,
+              saveMissing: true,
+              outputPath: "public/locales/{{locale}}/{{ns}}.json",
+            },
+          ],
+        ],
+      },
+    },
+  };
+  //t("key", {ns: "locale-file"})
+
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: "ts-loader",
     exclude: /node_modules/,
   };
 
-  return [cssLoader, typescriptLoader, svgLoader, fileLoader];
+  return [cssLoader, babelLoader, typescriptLoader, svgLoader, fileLoader];
 }
