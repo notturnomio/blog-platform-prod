@@ -7,6 +7,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:i18next/recommended',
     'prettier',
     'standard-with-typescript',
     'eslint:recommended'
@@ -22,7 +23,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react', 'react-hooks', 'prettier', '@typescript-eslint'],
+  plugins: ['react', 'react-hooks', 'prettier', '@typescript-eslint', 'i18next'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -88,7 +89,8 @@ module.exports = {
     ],
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/prefer-ts-expect-error': 'off',
-    '@typescript-eslint/no-floating-promises': 'off'
+    '@typescript-eslint/no-floating-promises': 'off',
+    'i18next/no-literal-string': 1
   },
   settings: {
     react: {
