@@ -9,6 +9,8 @@
     "jsx": "react-jsx",
     // The compiler will process not only TS files, but also JS files
     "allowJs": true,
+    "strict": false,
+    "strictNullChecks": true,
     // Absolute import
     "baseUrl": ".",
     "paths": {
@@ -24,13 +26,7 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
-  // "include": [
-  //   "next-env.d.ts",
-  //   "**/*.ts",
-  //   "**/*.tsx",
-  //   "**/**/*.ts",
-  //   "**/**/*.tsx"
-  // ],
-  // "exclude": ["node_modules"]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/**/*.ts", "**/**/*.tsx", ".eslintrc.js"],
+  "exclude": ["node_modules", "public"]
 }

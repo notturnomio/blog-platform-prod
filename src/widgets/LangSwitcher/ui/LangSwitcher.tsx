@@ -1,8 +1,9 @@
-import { useTranslation } from "react-i18next";
-import { classNames } from "shared/lib/classNames/classNames";
-import { Button, ButtonTheme } from "shared/ui/Button/Button";
-import cls from "./LangSwitcher.module.scss";
-import SwitchLangIcon from "shared/assets/icons/language.svg";
+import { useTranslation } from 'react-i18next';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import cls from './LangSwitcher.module.scss';
+import SwitchLangIcon from 'shared/assets/icons/language.svg';
+import React from 'react';
 
 interface LangSwitcherProps {
   className?: string;
@@ -14,17 +15,16 @@ export const LangSwitcher: React.FC<LangSwitcherProps> = (props) => {
 
   const { t, i18n } = useTranslation();
   const toggle = async () => {
-    i18n.changeLanguage(i18n.language === "en" ? "es" : "en");
+    await i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en');
   };
   return (
     <Button
-      className={classNames(cls.langSwitcher, {}, [className])}
+      className={classNames(cls.langSwitcher, {}, [className ?? ''])}
       theme={ButtonTheme.NORMAL}
       onClick={toggle}
-      collapsed={collapsed}
-    >
+      collapsed={collapsed}>
       <SwitchLangIcon />
-      <span>{t("Translate")}</span>
+      <span>{t('Translate')}</span>
     </Button>
   );
 };
