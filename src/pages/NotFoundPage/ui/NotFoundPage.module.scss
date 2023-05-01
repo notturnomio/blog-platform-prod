@@ -1,0 +1,20 @@
+.notFoundPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.notFoundPage h2 {
+  display: flex;
+  font: var(--font-l);
+  font-weight: 600;
+  color: var(--header-color);
+}
+
+.link {
+  display: flex;
+  color: var(--subheader-color);
+}
