@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import { classNames } from './classNames';
 
 describe('classNames', () => {
   test('with only first param', () => {
@@ -18,6 +18,7 @@ describe('classNames', () => {
   });
   test('with mod param undefined', () => {
     const expected = 'someClass secondClass thirdClass';
+    // @ts-expect-error
     expect(classNames('someClass', { scrollable: undefined }, ['secondClass', 'thirdClass'])).toBe(expected);
   });
 });

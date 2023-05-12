@@ -1,0 +1,33 @@
+.pageError {
+  min-height: calc(100vh - var(--navbar-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  background: var(--bg-color);
+  font-family: var(--font-family-main);
+}
+
+.message {
+  display: flex;
+  font-size: var(--font-size-l);
+  color: #f99417;
+}
+
+.button {
+  display: flex;
+  background: #5d3891;
+  color: #fff;
+  padding: 0 30px;
+}
+
+.button svg {
+  fill: #f99417;
+  height: 15px;
+}
+
+.button:hover svg {
+  fill: #fff;
+  height: 12px;
+}
