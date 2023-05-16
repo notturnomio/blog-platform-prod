@@ -3,6 +3,7 @@ import HTMLWebpackplugin from 'html-webpack-plugin';
 import { type BuildOptions } from './types/config';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
   return [
@@ -17,6 +18,8 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev)
     }),
-    new ReactRefreshWebpackPlugin({ overlay: false })
+    new ReactRefreshWebpackPlugin({ overlay: false }),
+    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+    new BundleAnalyzerPlugin({ analyzerMode: (process.env.analyze as 'server') || 'disabled' })
   ];
 }
