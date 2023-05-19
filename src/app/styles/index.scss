@@ -1,7 +1,8 @@
-@import './reset';
-@import './variables/global';
-@import './themes/light';
-@import './themes/dark';
+/* stylelint-disable string-quotes */
+@import "./reset";
+@import "./variables/global";
+@import "./themes/light";
+@import "./themes/dark";
 
 .app {
   font: var(--font-m);

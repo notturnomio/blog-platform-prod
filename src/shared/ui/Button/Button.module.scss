@@ -10,6 +10,7 @@
   border: 0;
   background: none;
   outline: none;
+  color: var(--inverted-bg-color);
 }
 
 .normal {
@@ -17,8 +18,22 @@
   display: flex;
   gap: 8px;
   align-items: center;
-  padding: 5px 10px;
+  padding: 5px 20px;
   border: none;
+  border-radius: 30px;
+  background: var(--inverted-bg-color);
+  color: var(--bg-color);
+}
+
+.outline {
+  height: 36px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 5px 20px;
+  background: none;
+  border: 1px solid var(--inverted-bg-color);
+  color: var(--inverted-bg-color);
   border-radius: 30px;
 }
 
@@ -30,16 +45,16 @@ svg {
   padding: 0;
 }
 
-.normal:hover svg {
-  height: 23px;
-  width: 23px;
-}
+// .normal:hover svg {
+//   height: 23px;
+//   width: 23px;
+// }
 
-.normal:hover {
-  font-weight: 600;
-  font-size: 14px;
-  gap: 5px;
-}
+// .normal:hover {
+//   font-weight: 600;
+//   font-size: 14px;
+//   gap: 5px;
+// }
 
 span {
   // padding-left: 10px;

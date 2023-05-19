@@ -34,7 +34,9 @@
     "**/**/*.ts",
     "**/**/*.tsx",
     ".eslintrc.js",
-    "./config/jest/setupTests.ts"
+    "./config/jest/setupTests.ts",
+    "./config/storybook/main.js",
+    "./config/storybook/preview.js"
   ],
   "exclude": ["node_modules", "public"]
 }
