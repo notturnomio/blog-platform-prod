@@ -9,14 +9,14 @@
     "build:dev": "webpack --env mode=development",
     "analyze:prod": "analyze=server npm run build:prod",
     "analyze:dev": "analyze=server npm run build:dev",
-    "unit": "jest --config ./config/jest/jest.config.ts",
     "lint:ts": "npx eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "npx eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "build-storybook": "storybook build -c ./config/storybook",
-    "chromatic": "npx chromatic --exit-zero-on-changes"
+    "chromatic": "npx chromatic --exit-zero-on-changes",
+    "test:unit": "jest --config ./config/jest/jest.config.ts"
   },
   "keywords": [],
   "author": "",

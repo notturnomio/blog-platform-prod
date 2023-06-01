@@ -1,5 +1,7 @@
-import { BuildPaths } from '../build/types/config';
-import webpack, { RuleSetRule } from 'webpack';
+/* eslint-disable @typescript-eslint/prefer-includes */
+import { type BuildPaths } from '../build/types/config';
+import { type RuleSetRule } from 'webpack';
+import type webpack from 'webpack';
 import path from 'path';
 import { buildCssLoaders } from '../build/loaders/buildCssLoaders';
 
