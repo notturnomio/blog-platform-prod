@@ -42,6 +42,6 @@ jobs:
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
-          projectToken: ${ {secrets.CHROMATIC_PROJECT_TOKEN} }
+          projectToken: ${ { secrets.CHROMATIC_PROJECT_TOKEN } }
           skip: true
           exitZeroOnChanges: true
