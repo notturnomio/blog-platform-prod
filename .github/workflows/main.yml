@@ -44,4 +44,4 @@ jobs:
         with:
           projectToken: ${ {secrets.CHROMATIC_PROJECT_TOKEN} }
           skip: true
-          nexitZeroOnChanges: true
+          exitZeroOnChanges: true
