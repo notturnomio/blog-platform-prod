@@ -6,7 +6,7 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
-  return [
+  const plugins = [
     new HTMLWebpackplugin({
       template: paths.html
     }),
@@ -18,8 +18,13 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev)
     }),
-    new ReactRefreshWebpackPlugin({ overlay: false }),
-    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-    new BundleAnalyzerPlugin({ analyzerMode: (process.env.analyze as 'server') || 'disabled' })
+    new ReactRefreshWebpackPlugin({ overlay: false })
   ];
+  if (isDev) {
+    plugins.push(
+      // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+      new BundleAnalyzerPlugin({ analyzerMode: (process.env.analyze as 'server') || 'disabled' })
+    );
+  }
+  return plugins;
 }
