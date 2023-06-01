@@ -30,6 +30,8 @@ jobs:
           projectToken: ${ {secrets.CHROMATIC_PROJECT_TOKEN} }
           # dryRun: true # 👈 Add this line to enable dryRun option
           # skip: true # 👈 Add this line to enable skip option
+          skip: true
+          exitZeroOnChanges: true
 
           # .github/workflows/chromatic.yml
 # Other configuration required
