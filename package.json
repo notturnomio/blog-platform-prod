@@ -96,6 +96,6 @@
   "ts-standard": {
     "project": "./tsconfig.json"
   },
-  "readme": "ERROR: No README data found!",
+  "readme": "ERROR: No README data found!!!",
   "_id": "blog-production@1.0.0"
 }
