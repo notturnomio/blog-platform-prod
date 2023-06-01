@@ -30,8 +30,6 @@ jobs:
       - name: build storybook
         run: npm run storybook:build
       - name: screenshot testing
-        run: npm run chromatic
-      - name: screenshot testing
         uses: chromaui/action@v1
         with:
           projectToken: ${ {secrets.CHROMATIC_PROJECT_TOKEN} }
