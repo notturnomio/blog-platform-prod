@@ -34,8 +34,9 @@ export const LightCollapsed = {
 };
 
 export const DarkCollapsed = {
-  args: { className: 'collapsed' },
+  args: { className: cls.collapsed, collapsed: true },
   parameters: {
-    theme: 'dark'
+    theme: 'dark',
+    collapsed: true
   }
 };

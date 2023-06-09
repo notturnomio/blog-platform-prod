@@ -1,5 +1,5 @@
 import { fireEvent, screen } from '@testing-library/react';
-import { renderWithTranslation } from 'shared/lib/tests/renderWithTranslation/renderWithTranslation';
+import { renderComponent } from 'shared/lib/tests/renderComponent/renderComponent';
 import { Sidebar } from './Sidebar';
 
 // jest.mock('react-i18next', () => ({
@@ -8,13 +8,13 @@ import { Sidebar } from './Sidebar';
 
 describe('Sidebar', () => {
   test('render Sidebar', () => {
-    renderWithTranslation(<Sidebar />);
+    renderComponent(<Sidebar />);
 
     expect(screen.getByTestId('sidebar')).toBeInTheDocument();
   });
 
   test('toggle Sidebar', () => {
-    renderWithTranslation(<Sidebar />);
+    renderComponent(<Sidebar />);
     const sidebar = screen.getByTestId('sidebar');
     const toggleButton = screen.getByTestId('sidebar-toggle');
 
