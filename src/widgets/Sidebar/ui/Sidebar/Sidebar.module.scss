@@ -46,15 +46,15 @@
 .navName {
   font-weight: 600;
   margin-left: 6px;
-  line-height: 25px;
+  line-height: 22px;
   opacity: 1;
   transition: all 0.6s;
 }
 
-// .navIcon {
-//   fill: var(--static-orange-color);
-//   transition: all 0.3s;
-// }
+.navIcon {
+  height: 20px;
+  width: 20px;
+}
 
 .link:hover {
   color: var(--static-light-color);

@@ -38,5 +38,5 @@
     "./config/storybook/main.js",
     "./config/storybook/preview.js"
   ],
-  "exclude": ["node_modules", "public"]
+  "exclude": ["node_modules", "public", "src/stories/"]
 }

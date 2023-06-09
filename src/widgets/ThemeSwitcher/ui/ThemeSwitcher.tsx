@@ -1,7 +1,8 @@
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ThemeSwitcher.module.scss';
-import SwitchThemeIcon from 'shared/assets/icons/switch-theme.svg';
+import ThemeLightIcon from 'shared/assets/icons/sun.svg';
+import ThemeDarkIcon from 'shared/assets/icons/moon.svg';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 
@@ -22,8 +23,16 @@ export const ThemeSwitcher = ({ className, collapsed, title }: ThemeSwitcherProp
       onClick={toggleTheme}
       collapsed={collapsed}
       title={title}>
-      <SwitchThemeIcon />
-      <span>{theme === Theme.DARK ? t('Light Theme') : t('Dark Theme')}</span>
+      {theme === Theme.DARK ? (
+        <>
+          <ThemeLightIcon />
+          <span> {t('Light Theme')}</span>
+        </>
+      ) : (
+        <>
+          <ThemeDarkIcon /> <span>{t('Dark Theme')}</span>
+        </>
+      )}
     </Button>
   );
 };
