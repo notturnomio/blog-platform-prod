@@ -13,3 +13,16 @@ reviews:
             suggestion: ''
             type: approve
             time: '2023-04-27T15:45:34.822Z'
+  About Us:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Rustem Mukazhanov
+              email: r.mukazhanov@gmail.com
+            id: OsfQFbtaw7VuOdDImlue8
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-06-09T13:10:27.790Z'
+            resolved: true

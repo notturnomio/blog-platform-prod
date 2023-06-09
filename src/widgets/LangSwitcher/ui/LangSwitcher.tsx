@@ -3,26 +3,27 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import cls from './LangSwitcher.module.scss';
 import SwitchLangIcon from 'shared/assets/icons/language.svg';
-import React from 'react';
 
 interface LangSwitcherProps {
   className?: string;
-  collapsed?: boolean;
+  collapsed: boolean;
+  title: string;
 }
 
-export const LangSwitcher: React.FC<LangSwitcherProps> = (props) => {
-  const { className, collapsed } = props;
-
+export const LangSwitcher = ({ className, collapsed, title }: LangSwitcherProps) => {
   const { t, i18n } = useTranslation();
+
   const toggle = async () => {
     await i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en');
   };
+
   return (
     <Button
-      className={classNames(cls.langSwitcher, {}, [className ?? ''])}
+      className={classNames(cls.langSwitcher, { [cls.langSwitcherCollapsed]: collapsed }, [className ?? ''])}
       theme={ButtonTheme.NORMAL}
       onClick={toggle}
-      collapsed={collapsed}>
+      collapsed={collapsed}
+      title={title}>
       <SwitchLangIcon />
       <span>{t('Translate')}</span>
     </Button>

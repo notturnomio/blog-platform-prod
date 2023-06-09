@@ -3,13 +3,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--primary-color);
+  padding: 5px 20px;
 }
 
 .clear {
+  display: flex;
+  gap: 8px;
   padding: 0;
-  border: 0;
+  border: none;
   background: none;
   outline: none;
+  color: var(--inverted-bg-color);
+}
+
+// .clear > svg {
+//   height: 20px;
+//   width: 20px;
+//   fill: var(--button-icon-color);
+//   margin: 0;
+//   padding: 0;
+// }
+
+.outline {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: none;
+  border: 1px solid var(--inverted-bg-color);
+  border-radius: 30px;
   color: var(--inverted-bg-color);
 }
 
@@ -18,54 +40,73 @@
   display: flex;
   gap: 8px;
   align-items: center;
-  padding: 5px 20px;
+  border: none;
+  border-radius: 30px;
+  background: var(--bg-color);
+  color: var(--inverted-bg-color);
+}
+
+.inverted {
+  height: 36px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
   border: none;
   border-radius: 30px;
   background: var(--inverted-bg-color);
   color: var(--bg-color);
 }
 
-.outline {
-  height: 36px;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  padding: 5px 20px;
-  background: none;
-  border: 1px solid var(--inverted-bg-color);
-  color: var(--inverted-bg-color);
-  border-radius: 30px;
-}
-
-svg {
+.normal svg {
   height: 20px;
   width: 20px;
   fill: var(--button-icon-color);
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease-out;
 }
 
-// .normal:hover svg {
-//   height: 23px;
-//   width: 23px;
-// }
-
-// .normal:hover {
-//   font-weight: 600;
-//   font-size: 14px;
-//   gap: 5px;
-// }
-
 span {
-  // padding-left: 10px;
-  font-size: var(--font-size-m);
+  opacity: 1;
   transition: font-size 0.6s ease-out;
+}
+
+.square {
+  padding: 0;
+}
+
+.square.size-m {
+  width: var(--font-line-m);
+  height: var(--font-line-m);
+}
+
+.square.size-l {
+  width: var(--font-line-l);
+  height: var(--font-line-l);
+}
+
+.square.size-xl {
+  width: var(--font-line-xl);
+  height: var(--font-line-xl);
+}
+
+.size-m {
+  font: var(--font-m);
+}
+
+.size-l {
+  font: var(--font-l);
+}
+
+.size-xl {
+  font: var(--font-xl);
 }
 
 .collapsedButton {
   padding: 0;
   text-align: center;
   gap: 0;
+  font-size: 0 !important;
 }
 
 .collapsedButton:hover {
@@ -75,6 +116,23 @@ span {
 .collapsedButton span {
   padding-left: 0;
   font-size: 0;
-  opacity: 0;
   margin: 0;
+  opacity: 0;
+  transition: all 0.3s;
 }
+
+.normal:hover {
+  background: var(--button-bg-color-hover);
+  transition: background 0.3s ease-out;
+}
+
+.normal:hover svg {
+  // height: 22px;
+  // width: 22px;
+  fill: var(--inverted-bg-color);
+}
+
+// .normal:hover span {
+//   text-shadow: 0 3px 3px rgba(0 0 0 / 70%);
+//   transition: text-shadow 0.3s ease-out;
+// }

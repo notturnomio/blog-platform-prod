@@ -116,7 +116,8 @@ module.exports = {
         markupOnly: true,
         ignoreAttribute: ['data-testid', 'to']
       }
-    ]
+    ],
+    'multiline-ternary': ['error', 'never']
   },
   settings: {
     react: {

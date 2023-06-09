@@ -1,6 +1,14 @@
 .themeSwitcher {
   background: var(--button-bg-color);
   color: var(--inverted-button-text-color);
-  width: 50%;
+  height: 36px;
+  width: 200px;
+  transition: width 0.3s;
   margin: 0 auto;
+}
+
+.themeSwitcherCollapsed {
+  width: 36px !important;
+  height: 36px !important;
+  transition: all 0.3s;
 }
